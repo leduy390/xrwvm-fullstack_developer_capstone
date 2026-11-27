@@ -1,0 +1,5 @@
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+MY_NAMESPACE=$(ibmcloud cr namespaces | grep sn-labs-)
+echo $MY_NAMESPACE
+docker build -t us.icr.io/$MY_NAMESPACE/dealership .
+docker push us.icr.io/$MY_NAMESPACE/dealership
